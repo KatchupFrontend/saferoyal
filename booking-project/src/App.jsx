@@ -7,6 +7,7 @@ import Services from './pages/Services'
 import SignUp from './pages/SignUp'
 import Landing from './pages/Landing'
 import Login from './pages/Login'
+import { Team } from './pages/Team'
 const App = () => {
     return (
     <BrowserRouter> 
@@ -17,6 +18,8 @@ const App = () => {
     <Route path='/Services' element={<Services/>}/>
     <Route path='/SignUp' element={<SignUp/>}/>
     <Route path='/Login' element={<Login/>}/>
+    <Route path='/Landing' element={<Landing/>}/>
+    <Route path='Team' element={<Team/>}/>
      
      <Route path='/facilities' 
      element={
