@@ -55,7 +55,7 @@ const Navbar = () => {
                    
               </ul>
          <div className=' md:flex hidden'>
-            <Link to="/register">
+            <Link to="/Login">
             <button className=' bg-blue-500 rounded-lg px-4 py-2 hover:bg-blue-600 m-4'>Register</button></Link>
             {/* <button className='m-4 py-2 px-3 bg-transparent hover:bg-blue-600 rounded-lg '>Log In</button> */}
          </div>
@@ -87,11 +87,10 @@ const Navbar = () => {
            }
             </ul>
             <div>
-                <Link to="/register">
+                <Link to="/Login">
                 <button className=' bg-blue-500 rounded-lg px-4 py-2 hover:bg-blue-600 m-4'>Register</button>
                 </Link>
             
-                {/* <a href='http://shrtco.de/ywZsv' target="_blank" className='bg-blue-600 w-full ml-3 rounded-md hover:bg-blue-800 px-4 py-2'>Register</a> */}
             </div>
         </div>
        </div>
