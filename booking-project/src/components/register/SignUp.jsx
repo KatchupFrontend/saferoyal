@@ -1,26 +1,9 @@
 import React, {useState} from 'react'
 import { Link , useNavigate} from 'react-router-dom'
-import { UserAuth } from '../../context/AuthContext';
 
 const SignUp = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('')
-    const { createUser } = UserAuth();
-    const navigate = useNavigate()
-  
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      setError('');
-      try {
-        await createUser(email, password);
-        navigate('/facilities')
-      } catch (e) {
-        setError(e.message);
-        console.log(e.message);
-      }
-    };
- 
+    
+    
   return (
     <div>
          <div className='flex w-full h-screen'>

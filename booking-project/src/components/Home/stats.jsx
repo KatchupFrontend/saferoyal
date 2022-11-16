@@ -27,7 +27,7 @@ const stats = () => {
         <h2 class="title-font font-medium text-3xl text-white">40+</h2>
         <p class="leading-relaxed">Guest House</p>
       </div>
-      <div className='flex justify-center items-center pl-40'>
+      <div className=' '>
       <button className='px-4 py-2 bg-blue-500 text-white text-center rounded-md hover:bg-blue-600 '>Lease a home</button>
  
       </div>

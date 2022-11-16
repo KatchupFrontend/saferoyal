@@ -2,11 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { BiMenuAltRight } from 'react-icons/bi';
-import { UserAuth } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 const NavLanding = () => {
-  const {user, logout} = UserAuth();
+  
     const [nav,setNav] = useState(false);
     const navigate = useNavigate();
   
@@ -27,15 +26,7 @@ const NavLanding = () => {
        ];
 
       
-  const handleLogout = async () => {
-    try {
-      await logout();
-      navigate('/');
-      console.log('You are logged out')
-    } catch (e) {
-      console.log(e.message);
-    }
-  };
+  
     
           return (
 <div className=' h-24 max-w-screen mx-auto z-[100]'>

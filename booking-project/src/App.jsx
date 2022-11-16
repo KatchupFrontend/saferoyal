@@ -6,12 +6,11 @@ import AboutPage from './pages/AboutPage'
 import Services from './pages/Services'
 import SignUp from './components/register/SignUp'
 import SignIn from './components/register/SignIn'
-import { AuthContextProvider } from './context/AuthContext'
 import Landing from './pages/Landing'
 const App = () => {
     return (
     <BrowserRouter> 
-    <AuthContextProvider>
+  
     <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/About' element={<AboutPage/>}/>
@@ -23,8 +22,7 @@ const App = () => {
       
             <Landing/>}/>
     </Routes> 
-       </AuthContextProvider>
-   
+
     </BrowserRouter>
   )
 }
