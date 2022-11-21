@@ -13,27 +13,26 @@ import Detailpage from './components/Landing/Detailpage'
 import Checkout from './components/Landing/Checkout'
 import PaymentMethod from './components/Landing/PaymentMethod'
 import Confirm from './components/Landing/Confirm'
+import LandingHero from './components/Landing/LandingHero'
 const App = () => {
     return (
-    <BrowserRouter> 
-  
-    <Routes>
-    <Route path='/' element={<Confirm/>}/>
-    <Route path='/About' element={<AboutPage/>}/>
-    <Route path='/Services' element={<Services/>}/>
-    <Route path='/SignUp' element={<SignUp/>}/>
-    <Route path='/Login' element={<Login/>}/>
-    <Route path='/Landing' element={<Landing/>}/>
-    <Route path='Team' element={<Team/>}/>
-     
-     <Route path='/facilities' 
-     element={
-      
-            <Landing/>}/>
-    </Routes> 
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/payment" element={<PaymentMethod />} />
+          <Route path="/details" element={<Detailpage />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/About" element={<AboutPage />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Landing" element={<Landing />} />
+          <Route path="Team" element={<Team />} />
 
-    </BrowserRouter>
-  )
+          <Route path="/facilities" element={<Landing />} />
+        </Routes>
+      </BrowserRouter>
+    );
 }
 
 export default App

@@ -6,7 +6,7 @@ import Properties from '../components/Landing/Properties'
 const Landing = () => {
   return (
     <div>
-       <NavLanding/> 
+      
      <LandingHero/>
        <Properties/>
 <Footer/>
