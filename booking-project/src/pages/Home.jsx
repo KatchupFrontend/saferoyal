@@ -1,20 +1,21 @@
 import React from 'react'
-import Stats from '../components/Home/stats';
-import Serv from '../components/Home/Serv'
- import Cards from '../components/Home/cards'
-import Footer from '../components/Home/Footer'
-import Navbar from '../components/Home/Navbar';
-const home = () => {
+import HLayout from '../components/HLayout'
+import Stats from '../components/stats'
+import Serv from '../components/Serv'
+import Cards from '../components/cards'
+import About from '../components/about'
+import Find from '../components/Find'
+const Home = () => {
   return (
     <div>
-        <Navbar/>
-        <Stats/>
-         <Serv/>
-        <Cards/>
-        <Footer/>  
+      <HLayout>
+       <Stats/>
+       <Serv/>
+       <Cards/>
+      </HLayout>
 
     </div>
   )
 }
 
-export default home
+export default Home

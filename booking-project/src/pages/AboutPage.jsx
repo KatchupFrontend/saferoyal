@@ -1,16 +1,15 @@
-import React from 'react'
-import AboutHero from '../components/About/AboutHero'
-import AboutNav from '../components/About/AboutNav'
-import Footer from '../components/Home/Footer'
+import React from "react";
+import AboutHero from "../components/AboutHero";
+import HLayout from "../components/HLayout";
+
 const AboutPage = () => {
   return (
     <div>
+      <HLayout>
         <AboutNav/>
-        <AboutHero/>
-        <Footer/>
-        
+      </HLayout>
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

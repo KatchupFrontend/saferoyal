@@ -1,3 +1,5 @@
+im
+
 
 export const data = [
 
@@ -7,7 +9,7 @@ export const data = [
         name: 'Nevada Hostel',
         price: '2000',
         location: 'Ayeduase',
-        image:'../assets/pic05.jpg',
+        image:,
         persons:'4 in 1',
         
 
