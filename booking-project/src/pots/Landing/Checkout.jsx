@@ -80,8 +80,8 @@ const Checkout = () => {
               <button class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
                 Pay
               </button>
-              <p class="text-xs text-gray-500 mt-3">
-                Literally you probably haven't heard of them jean shorts.
+              <p class="text-xs text-red-500 mt-3">
+              This information will be needed at check in day.
               </p>
             </div>
 
