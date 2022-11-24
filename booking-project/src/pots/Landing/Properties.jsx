@@ -1,44 +1,37 @@
-import React from 'react'
-import { useState } from 'react'
-import {data } from '/src/data/data'
-import {Link} from 'react-router-dom'
-
+import React from "react";
+import { useState } from "react";
+import { data } from "/src/data/data";
+import { Link } from "react-router-dom";
 
 const Properties = () => {
-    const [rooms, setRooms] = useState(data);
-    const [search, setSearch] = useState('');
+  const [rooms, setRooms] = useState(data);
+  const [search, setSearch] = useState("");
 
-    const filterType = (category) =>{ 
-        setRooms(
-        data.filter((item) =>{
-            return item.category === category;
-        })
-        )
-    };
+  const filterType = (category) => {
+    setRooms(
+      data.filter((item) => {
+        return item.category === category;
+      })
+    );
+  };
 
+  const filterPerson = (persons) => {
+    setRooms(
+      data.filter((item) => {
+        return item.persons === persons;
+      })
+    );
+  };
 
-    const filterPerson = (persons) =>{
-        setRooms(
-            data.filter((item)=>{
-                return item.persons === persons;
-            })
-        )
-    };
+  const filterSearch = (e) => {
+    setSearch(e.target.value);
+    setRooms(
+      data.filter((item) => {
+        return item.name.toLowerCase().includes(search.toLowerCase());
+      })
+    );
+  };
 
-    const filterSearch = (e) =>{
-        setSearch(e.target.value);
-        setRooms(
-            data.filter((item)=>{
-                return item.name.toLowerCase().includes(search.toLowerCase());
-            })
-        )
-    };
-
-    
-    
-
-
-    
   return (
     <div className="max-w- m-auto px-4 py-12">
       <h1 className="">Our Availble Rooms</h1>
@@ -105,7 +98,7 @@ const Properties = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4  gap-5 pt-4 ">
+      <div className="grid grid-cols-1 lg:grid-cols-4  gap-5 pt-4 ">
         {
           // data.filter((item) => {
           //     return search.toLowerCase() === ''? item
@@ -144,10 +137,6 @@ const Properties = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Properties
-
-
-
-
+export default Properties;
