@@ -2,7 +2,7 @@ import React from 'react'
 
 const HomeHero = () => {
   return (
-    <div className="text-white md:text-left  text-center flex-col justify-center absolute  top-1/2 ">
+    <div className="text-white md:text-left  md:pl-4 text-center flex-col justify-center absolute  top-1/2 ">
       <h1 className="text-4xl font-bold  px-2">
         Book affordable rooms with
         <span className="hover:text-blue-500"> SafeRoyal</span>

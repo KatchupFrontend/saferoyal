@@ -1,100 +1,100 @@
 import React from 'react'
-import image1 from '../assets/images/rooms/pic01.jpg'
-import image2 from '../assets/images/rooms/pic04.jpg'
+import image from '../assets/images/rooms/UDS.jpg'
+import image2 from '../assets/images/rooms/am.jpg'
+import image4 from "../assets/images/rooms/Knust.jpeg";
+
 
 
 
 const Campuses = () => {
   return (
     <div>
-      <section class="text-gray-400 bg-gray-900 body-font"/>
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap -m-4">
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260"/>
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-white title-font text-lg font-medium">The Catalyzer</h2>
-          <p class="mt-1">$16.00</p>
+      <section class="text-gray-400 bg-gray-900 body-font">
+        <div>
+          <h1 className="text-center text-3xl font-bold text-white px-3">
+        Featured Schools
+          </h1>
+          <p  className='text-center text-md'>Find hostels near to these top schools in Ghana</p>
         </div>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/421x261"/>
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-white title-font text-lg font-medium">Shooting Stars</h2>
-          <p class="mt-1">$21.15</p>
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap -m-4">
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  class="object-cover object-center w-full h-full block"
+                  src={image}
+                />
+              </a>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  class="object-cover object-center w-full h-full block"
+                  src={image}
+                />
+              </a>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  class="object-cover object-center w-full h-full block"
+                  src={image2}
+                />
+              </a>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  class="object-cover object-center w-full h-full block"
+                  src={image4}
+                />
+              </a>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  class="object-cover object-center w-full h-full block"
+                  src={image}
+                />
+              </a>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  class="object-cover object-center w-full h-full block"
+                  src={image}
+                />
+              </a>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  class="object-cover object-center w-full h-full block"
+                  src={image}
+                />
+              </a>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+              <a class="block relative h-48 rounded overflow-hidden">
+                <img
+                  alt="ecommerce"
+                  class="object-cover object-center w-full h-full block"
+                  src={image}
+                />
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/422x262"/>
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-white title-font text-lg font-medium">Neptune</h2>
-          <p class="mt-1">$12.00</p>
-        </div>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263"/>
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-white title-font text-lg font-medium">The 400 Blows</h2>
-          <p class="mt-1">$18.40</p>
-        </div>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/424x264"/>
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-white title-font text-lg font-medium">The Catalyzer</h2>
-          <p class="mt-1">$16.00</p>
-        </div>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/425x265"/>
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-white title-font text-lg font-medium">Shooting Stars</h2>
-          <p class="mt-1">$21.15</p>
-        </div>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src={}/>
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-white title-font text-lg font-medium">Neptune</h2>
-          <p class="mt-1">$12.00</p>
-        </div>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="block relative h-48 rounded overflow-hidden">
-          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src={}/>
-        </a>
-        <div class="mt-4">
-          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-          <h2 class="text-white title-font text-lg font-medium">The 400 Blows</h2>
-          <p class="mt-1">$18.40</p>
-        </div>
-      </div>
+      </section>
     </div>
-  </div>
-</section>
-    </div>
-  )
+  );
 }
 
 export default Campuses
