@@ -19,7 +19,9 @@ export default function Login() {
                 type="text"
                 placeholder="Please enter your email"
               />
-              <label htmlFor="" className="">Password</label>
+              <label htmlFor="" className="">
+                Password
+              </label>
               <input
                 className="border p-2 "
                 type="password"
@@ -27,7 +29,7 @@ export default function Login() {
               />
             </div>
             <button className="w-full py-2 my-4 text-white bg-blue-600 hover:bg-blue-500">
-              Sign In
+              <Link to={'/Landing'}> Sign In</Link>
             </button>
             <p className="text-center">Forgot Username or Password?</p>
           </form>
