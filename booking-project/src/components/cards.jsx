@@ -8,11 +8,11 @@ import pic3 from "../assets/images/rooms/pic03.jpg";
 const cards = () => {
   return (
     <div>
-      <section class="text-gray-400 bg-gray-900 body-font">
-        <h1 className="text-center text-3xl font-bold text-white">
+      <section class="text-gray-400 bg-gray-900 body-font py-3">
+        <h1 className="text-center text-3xl font-bold text-white px-3">
           Explore these places with Us
         </h1>
-        <p className="text-center text-md">
+        <p className="text-center text-md px-5">
           Lets help you book a room from these top places very easy and fast.
         </p>
         <div class="container px-5 py-24 mx-auto">

@@ -1,8 +1,9 @@
 import React from 'react'
-import pic5 from '../assets/images/rooms/pic04.jpg'
+import mypic from '../assets/images/rooms/pic02.jpg'
 
 
-const stats = () => {
+const servHero = () => {
+  console.log('fooldd')
   return (
     <div>
         <section class="text-gray-400 bg-gray-900 body-font">
@@ -28,12 +29,9 @@ const stats = () => {
         <h2 class="title-font font-medium text-3xl text-white">40+</h2>
         <p class="leading-relaxed">Guest House</p>
       </div>
-      <div className='mt-6'>
-     
-      </div>
          </div>
     <div class="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
-      <img class="object-cover object-center w-full h-full" src={pic5} alt="stats"/>
+      <img class="object-cover object-center w-full h-full" src={mypic} alt="stats"/>
     </div>
   </div>
 </section>
@@ -41,4 +39,4 @@ const stats = () => {
   )
 }
 
-export default stats
+export default servHero

@@ -36,36 +36,29 @@ const Serv = () => {
   ]
   return (
     <div>
-        <section class="text-gray-400 bg-gray-900 body-font ">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Why Choose Us</h1>
-        </div>
-    <div class="flex flex-wrap -m-4 text-center">
-
-      {
-       services.map(({id,type,logo,brief}) => (
-        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-        <div class="border-4 border-gray-800 px-4 py-6 rounded-lg hover:border-gray-500 duration-200 hover:scale-75 shadow-xl">
-          <div className='flex justify-center'>
-          {logo}
+      <section class="text-gray-400 bg-gray-900 body-font ">
+        <div class="container px-5 py-7 mx-auto">
+          <div class="flex flex-col text-center w-full mb-5">
+            <h1 className="text-center text-3xl font-bold text-white px-3">
+              Why Choose Us
+            </h1>
           </div>
+          <div class="flex flex-wrap -m-4 text-center">
+            {services.map(({ id, type, logo, brief }) => (
+              <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-4 border-gray-800 px-4 py-6 rounded-lg hover:border-gray-500 duration-200 hover:scale-75 shadow-xl">
+                  <div className="flex justify-center">{logo}</div>
 
-          
-          <p class="leading-relaxed text-white">{type}</p>
-          <p>{brief}</p>
+                  <p class="leading-relaxed text-white">{type}</p>
+                  <p>{brief}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-
-       ))
-      }
-     
-      
+      </section>
     </div>
-  </div>
-</section>
-    </div>
-  )
+  );
 }
 
 export default Serv

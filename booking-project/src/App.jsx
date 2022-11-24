@@ -24,10 +24,9 @@ const App = () => {
         <Route path="/Login" element={<Login />} />
         <Route path="/Landing" element={<Landing />} />
         <Route path="/details/:id" element={<Detailpage />} />
-        
         <Route path="/checkout/:id" element={<Checkout />} />
-        <Route path="/payment" element={<PaymentMethod />} />
-
+        <Route path="/Services" element={<Services />} />
+      
         {/* <Route path="/payment" element={<PaymentMethod />} />
 
 
@@ -35,8 +34,7 @@ const App = () => {
         
        
        } />
-        <Route path="/Services" element={<Services />} />
-         />
+       
         <Route path="Team" element={<Team />} />
 
         <Route path="/facilities" element={<Landing />} /> */}

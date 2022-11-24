@@ -4,8 +4,7 @@ import { FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
-const AboutNav = () => {
+const ServNav = () => {
     const [nav,setNav] = useState(false);
     const links = [
         {
@@ -25,7 +24,7 @@ const AboutNav = () => {
         },
         {
             id:4,
-            link: 'be a host'
+            link: 'Contact'
             
         }
     
@@ -65,8 +64,9 @@ const AboutNav = () => {
         
         <div className={nav ?'shadow-xl fixed left-0 top-0 w-4/5 bg-black z-40 text-white h-full p-10 ease-in duration-300': 'fixed top-0 left-[-100%] p-10 duration-300 ease-in h-full z-40 ' }>
             <div className='flex items-center justify-between w-full text-white'>
-                 <img src="./log.png" height={100} width={100} alt="" />
-            
+                <img src="./log.png" height={100} width={100} alt="" />
+            {/* <img src={axes} alt="" height="" width="" className='h-40 w-40' />
+    */}
                  <div onClick={() => setNav(false)} className="cursor-pointer p-3">
                     <FaTimes size={30}/>
                 </div>
@@ -75,21 +75,21 @@ const AboutNav = () => {
             {
             links.map(({id,link,url}) =>(
                 <li key={id} className='p-4 hover:text-blue-600 duration-300 text-lg cursor-pointer'>
-                   <Link to={url}>{link}</Link> </li>
+                  <Link to={url}>{link}</Link>  </li>
             ))
            }
             </ul>
             <div>
-                <Link to="/Login">
-                <button className=' bg-blue-500 rounded-lg px-4 py-2 hover:bg-blue-600 m-4'>Register</button>
-  
-                </Link>
-                          {/* <a href='http://shrtco.de/ywZsv' target="_blank" className='bg-blue-600 w-full ml-3 rounded-md hover:bg-blue-800 px-4 py-2'>Register</a> */}
+            
+            <Link to="/Login"><button className=' bg-blue-500 rounded-lg px-4 py-2 hover:bg-blue-600 m-4'>Register</button>
+          </Link>      {/* <a href='http://shrtco.de/ywZsv' target="_blank" className='bg-blue-600 w-full ml-3 rounded-md hover:bg-blue-800 px-4 py-2'>Register</a> */}
             </div>
         </div>
        </div>
        <div className='text-white text-center left-7 absolute  top-1/2 '>
-        <h1 className='text-4xl font-bold '>About Us - <span className='hover:text-blue-500'>Who We Are?</span> </h1>
+        <h1 className='text-4xl font-bold '>Our Services <span className='hover:text-blue-500'></span>
+       </h1>
+       <p>OPION's wide range of services offered on leased rooms across the country.</p> 
 
     </div>
 
@@ -100,6 +100,6 @@ const AboutNav = () => {
     )
 }
 
-export default AboutNav;
+export default ServNav;
 
 

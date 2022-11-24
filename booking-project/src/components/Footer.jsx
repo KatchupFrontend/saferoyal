@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaRegPaperPlane} from 'react-icons/fa'
+
 
 
 const Footer = () => {
@@ -9,24 +9,8 @@ const Footer = () => {
         <hr />
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap md:text-left text-center order-first">
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-400 hover:text-white">Serices</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white">About</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white">Contact</a>
-          </li>
-          <li>
-            <a class="text-gray-400 hover:text-white"></a>
-          </li>
-        </nav>
-      </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+      
+      <div class=" md:w-1/2  px-4">
         <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">APPARTMENTS</h2>
         <nav class="list-none mb-10">
           <li>
@@ -43,7 +27,7 @@ const Footer = () => {
           </li>
         </nav>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+      <div class=" md:w-1/2  px-4">
         <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">SERVICES</h2>
         <nav class="list-none mb-10">
           <li>
@@ -60,22 +44,10 @@ const Footer = () => {
           </li>
         </nav>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3 ">SUBSCRIBE</h2>
-        <div class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
-          <div class="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2 z-[10]">
-            <label for="footer-field" class="leading-7 text-sm text-gray-400">Send a message</label>
-            <input type="text" id="footer-field" name="footer-field" class="w-full bg-gray-800 rounded border bg-opacity-40 border-gray-700 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 focus:border-blue-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "/>
-          </div>
-          <button class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded"><FaRegPaperPlane size={30}/></button>
-        </div>
-        <p class="text-gray-500 text-sm mt-2 md:text-left text-center">Bitters chicharrones fanny pack
-          <br class="lg:block hidden"/>waistcoat green juice
-        </p>
-      </div>
+     
     </div>
   </div>
-  <div class="bg-gray-800 bg-opacity-75">
+  <div class="bg-gray-800 bg-opacity-75 pb-3">
     <div class="container  px-3 flex items-center sm:flex-row flex-col">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
       <img src="./log.png" alt=""className='' height={80} width={80}/>

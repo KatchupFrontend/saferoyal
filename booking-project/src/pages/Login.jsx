@@ -28,9 +28,11 @@ export default function Login() {
                 placeholder="Password"
               />
             </div>
-            <button className="w-full py-2 my-4 text-white bg-blue-600 hover:bg-blue-500">
-              <Link to={'/Landing'}> Sign In</Link>
-            </button>
+            <Link to={"/Landing"}>
+              <button className="w-full py-2 my-4 text-white bg-blue-600 hover:bg-blue-500">
+                Sign In
+              </button>
+            </Link>
             <p className="text-center">Forgot Username or Password?</p>
           </form>
           <div className="flex items-center ml-4">

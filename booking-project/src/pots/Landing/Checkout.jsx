@@ -81,7 +81,8 @@ const Checkout = () => {
                 Pay
               </button>
               <p class="text-xs text-red-500 mt-3">
-              This information will be needed at check in day.
+              This information will be needed at check in
+              .
               </p>
             </div>
 
