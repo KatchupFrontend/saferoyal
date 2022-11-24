@@ -9,7 +9,7 @@ import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import { Team } from "./pages/Team";
 import House from "../src/pages/House";
-import Detailpage from "./pots/Landing/Detailpage";
+import Detailpage from '../src/pages/Detailpage'
 import Checkout from "./pots/Landing/Checkout";
 import PaymentMethod from "./pots/Landing/PaymentMethod";
 import Confirm from "./pots/Landing/Confirm";
@@ -22,13 +22,21 @@ const App = () => {
         <Route path="/About" element={<AboutPage />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Landing" element={<Landing />} />
+        <Route path="/details/:id" element={<Detailpage />} />
+        
+        <Route path="/checkout/:id" element={<Checkout />} />
+        <Route path="/payment" element={<PaymentMethod />} />
 
         {/* <Route path="/payment" element={<PaymentMethod />} />
-        <Route path="/details" element={<Detailpage />} />
-        <Route path="/checkout" element={<Checkout />} />
+
+
+        {/* <Route path="/payment" element={<PaymentMethod />} />
+        
+       
        } />
         <Route path="/Services" element={<Services />} />
-         <Route path="/Landing" element={<Landing />} />
+         />
         <Route path="Team" element={<Team />} />
 
         <Route path="/facilities" element={<Landing />} /> */}

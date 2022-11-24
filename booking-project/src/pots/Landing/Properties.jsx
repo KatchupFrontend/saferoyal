@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import {data } from '/src/data/data'
 import {Link} from 'react-router-dom'
- 
 
 
 const Properties = () => {
@@ -114,7 +113,7 @@ const Properties = () => {
 
           // })
           rooms.map((item, id) => (
-            <Link to={"/details"}>
+            <Link to={"/details/" + item.id}>
               <div className="h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden hover:border-blue-700 duration-300">
                 <img
                   key={id}

@@ -1,8 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import pic17 from '../../assets/images/rooms/pic7.jpg'
+import pic2 from '../assets/images/rooms/pic01.jpg'
+import { useParams } from 'react-router-dom';
+import { data } from '../data/data';
 
 const Detailpage = () => {
+ const { id } = useParams();
+ const room = data.find((room) => {
+   return room.id === parseInt(id);
+ });
+ console.log(room);
+
   return (
     <section class="text-gray-600 body-font overflow-hidden">
       <div class="container px-5 py-24 mx-auto">
@@ -10,22 +18,31 @@ const Detailpage = () => {
           <img
             alt="ecommerce"
             class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-            src={pic17}
+            src={room.image}
           />
           <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
             <h2 class="text-sm title-font text-gray-500 tracking-widest">
-              Kumasi, Ayeduase
+              {room.location}
             </h2>
             <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
-              EVANDY HOSTEL
+              {room.name}
             </h1>
             <h2 class="text-lg font-bold title-font text-blue-500 tracking-widest">
-              4 in 1
+              {room.persons}
             </h2>
             <h2 class="text-lg font-bold  text-gray-900 tracking-widest">
-              First floor
+              {room.floortype}
             </h2>
-            <div class="flex mb-4">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              illo repudiandae molestias inventore nobis hic quas ex rem ad
+              placeat, ullam quidem unde obcaecati, odit maxime, voluptas animi
+              eligendi voluptatibus. Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Maiores sed facere illum reiciendis? Tenetur,
+              aspernatur temporibus ratione corporis rem quod consequuntur quos
+              nisi porro libero voluptatum consequatur sunt! Quidem, enim!
+            </p>
+            {/* <div class="flex mb-4">
               <span class="flex items-center">
                 <svg
                   fill="currentColor"
@@ -122,23 +139,16 @@ const Detailpage = () => {
                   </svg>
                 </a>
               </span>
-            </div>
-            <p class="leading-relaxed">
-              Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-              sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo
-              juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-              seitan poutine tumeric. Gastropub blue bottle austin listicle
-              pour-over, neutra jean shorts keytar banjo tattooed umami
-              cardigan.
-            </p>
+            </div> */}
+            <p class="leading-relaxed"></p>
 
             <div class="flex">
               <span class="title-font font-medium text-2xl text-gray-900">
-                Ghc 3,458.00
+                Ghc {room.price}.00
               </span>
 
               <button class="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">
-                <Link to="/checkout"> Book room</Link>
+                <Link to={"/checkout/" + room.id}>Book room</Link>
               </button>
 
               <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
