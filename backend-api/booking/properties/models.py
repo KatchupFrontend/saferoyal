@@ -51,7 +51,9 @@ class Room(models.Model):
     User = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(CampusCategory, on_delete=models.SET_NULL, null=True)
     roomFloor = models.ForeignKey(FloorCategory, on_delete=models.SET_NULL,null=True)
-    roomType = models.CharField(choices=(('Hostel'), ('Homestel')), max_length=1)
+    roomType = models.CharField(choices=( ('HOSTEL', "hostel"),
+            ('HOMESTEL', "homestel"),
+            ), max_length=1)
     apartmentName = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
     apartmentPrice = models.DecimalField(max_digits=10, decimal_places=2)
