@@ -90,11 +90,9 @@ class Room(models.Model):
 #Booking model
 class Booking(models.Model):
     room = models.ForeignKey(Room, on_delete=models.SET_NULL, null=True)
-    date_created = models.DateTimeField(auto_now_add=True)
-    date_start = models.DateTimeField()
-    date_end = models.DateTimeField()
-    status = models.CharField(max_length=20)
+    date_booked = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    status = models.BooleanField(default=False)
 
     def __str__(self):
         return self.room.apartmentName
