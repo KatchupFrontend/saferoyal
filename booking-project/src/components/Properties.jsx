@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import { data } from "/src/data/data";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Properties = () => {
-  const [rooms, setRooms] = useState(data);
+  const [categories, setCategories] = useState();
   const [search, setSearch] = useState("");
 
   const filterType = (category) => {
@@ -31,6 +31,7 @@ const Properties = () => {
       })
     );
   };
+
 
   return (
     <div className="max-w- m-auto px-4 py-12">

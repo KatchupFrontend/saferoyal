@@ -1,7 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
 import ampus from '../assets/images/rooms/pic01.jpg'
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 const Campus = () => {
+    const [campus, setCampus] = useState()
+
+    useEffect (() => {
+        fetch('http://localhost:8000/api/categories')
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+            setCampus(data)
+        })
+    }, [])
+
   return (
     <div>
       <section class="text-gray-600 body-font">
