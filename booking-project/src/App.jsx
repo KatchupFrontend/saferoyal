@@ -15,17 +15,20 @@ import PaymentMethod from "./pots/Landing/PaymentMethod";
 import Confirm from "./pots/Landing/Confirm";
 import LandingHero from "./pots/Landing/LandingHero";
 import Campus from "./components/Campus";
+import Properties from "./components/Properties";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        
         <Route path="/campus" element={<Campus/>} />
         <Route path="/About" element={<AboutPage />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/Landing" element={<Landing />} />
+        <Route path="/Properties" element={<Properties/>} />
+        <Route path="/Properties/:slug/ :category_id" element={<Properties />} />
         <Route path="/details/:id" element={<Detailpage />} />
         <Route path="/checkout/:id" element={<Checkout />} />
         <Route path="/Services" element={<Services />} />
