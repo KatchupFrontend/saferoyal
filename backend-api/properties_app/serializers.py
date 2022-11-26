@@ -58,7 +58,7 @@ class BookingDetailSerializer(serializers.ModelSerializer):
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = models.CampusCategory
-        fields = ['id','campusname', 'campuslocation']
+        fields = ['id','campusname', 'campuslocation','campuslogo']
 
 
     def __init__(self, *args, **kwargs):

@@ -1,10 +1,14 @@
 import React from "react";
 import { useState } from "react";
+import { data } from "/src/data/data";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const Properties = () => {
-  const [categories, setCategories] = useState();
+  const { id } = useParams();
+
+  const [rooms, setRooms] = useState(data);
   const [search, setSearch] = useState("");
 
   const filterType = (category) => {
@@ -31,6 +35,15 @@ const Properties = () => {
       })
     );
   };
+
+  useEffect(() => {
+    setRooms(
+      data.filter((item) => {
+        return item.id === id;
+      })
+    );
+  }, [id]);
+  
 
 
   return (
