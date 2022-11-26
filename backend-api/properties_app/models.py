@@ -5,14 +5,13 @@ from django.contrib.auth.models import User
 
 
 #Customer model
-# class Customer(models.Model):
-#     user  = models.OneToOneField(User, on_delete=models.CASCADE)
-#     name  = models.CharField(max_length=200, null=True)
-#     phone = models.PositiveBigIntegerField()
-#     email = models.EmailField(max_length=200, null=True, on_delete=models.CASCADE)
-#     date_created = models.DateTimeField(auto_now_add=True, null=True)
-#     def __str__(self):
-#         return self.name
+class Customer(models.Model):
+    user= models.ForeignKey(User, on_delete=models.CASCADE)
+    fullname  = models.CharField(max_length=200)
+    phone = models.PositiveBigIntegerField()
+    email = models.EmailField(max_length=200, unique=True)
+    def __str__(self):
+        return self.user.username
 
 
 # class Property(models.Model):
@@ -89,13 +88,20 @@ class Room(models.Model):
 
 #Booking model
 class Booking(models.Model):
-    room = models.ForeignKey(Room, on_delete=models.SET_NULL, null=True)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     date_booked = models.DateTimeField(auto_now_add=True)
-    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     status = models.BooleanField(default=False)
 
     def __str__(self):
         return self.room.apartmentName
+
+# Booked Rooms
+class BookedRoom(models.Model):
+    booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.room.apartmentName
+
 
 
 

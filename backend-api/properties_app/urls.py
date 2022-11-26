@@ -3,6 +3,8 @@ from .import views
 
 
 urlpatterns = [
-    path('',),
+    path('rooms/', views.RoomList.as_view()),
+     path('room/<int:pk>/', views.RoomDetail.as_view()),
+
 ]
 
