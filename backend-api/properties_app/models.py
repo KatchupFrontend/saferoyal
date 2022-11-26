@@ -87,20 +87,21 @@ class Room(models.Model):
 
 
 #Booking model
-class Booking(models.Model):
+class Book(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     date_booked = models.DateTimeField(auto_now_add=True)
-    status = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.room.apartmentName
+        return self.customer.fullname
+
 
 # Booked Rooms
-class BookedRoom(models.Model):
-    booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
-    room = models.ForeignKey(Room, on_delete=models.CASCADE)
-    def __str__(self):
-        return self.room.apartmentName
+class Bookings(models.Model):
+     booking = models.ForeignKey(Book, on_delete=models.CASCADE)
+     room = models.ForeignKey(Room, on_delete=models.CASCADE)
+     status = models.BooleanField( default=True )
+     def __str__(self):
+         return self.booking
 
 
 

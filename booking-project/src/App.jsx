@@ -14,11 +14,14 @@ import Checkout from "./pots/Landing/Checkout";
 import PaymentMethod from "./pots/Landing/PaymentMethod";
 import Confirm from "./pots/Landing/Confirm";
 import LandingHero from "./pots/Landing/LandingHero";
+import Campus from "./components/Campus";
+
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/campus" element={<Campus/>} />
         <Route path="/About" element={<AboutPage />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Login" element={<Login />} />

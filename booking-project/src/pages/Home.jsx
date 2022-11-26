@@ -5,7 +5,6 @@ import Serv from '../components/Serv'
 import Cards from '../components/cards'
 import About from '../components/about'
 import Find from '../components/Find'
-import Campuses from '../components/Campuses'
 const Home = () => {
   return (
     <div>
@@ -13,7 +12,7 @@ const Home = () => {
        <Stats/>
        <Serv/>
        <Cards/>
-       <Campuses/>
+       
       </HLayout>
 
     </div>
