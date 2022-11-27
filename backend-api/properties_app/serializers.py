@@ -4,7 +4,7 @@ from . import models
 class RoomListSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Room
-        fields = '__all__'
+        fields = ['id','category', 'floortype', 'roomType', 'apartmentName', 'address', 'apartmentPrice']
 
     def __init__(self, *args, **kwargs):
         super(RoomListSerializer, self).__init__(*args, **kwargs)
