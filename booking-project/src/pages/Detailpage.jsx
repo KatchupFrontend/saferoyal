@@ -20,7 +20,9 @@ const Detailpage = () => {
      });
  }, []);
 
-  console.log(property);
+ 
+
+
   return <div>
     <h1>Detailpage{id}</h1>
   
