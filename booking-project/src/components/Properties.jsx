@@ -158,47 +158,43 @@ const Properties = () => {
           </div>
         </div> */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5 pt-4 ">
-          {
-            // data.filter((item) => {
-            //     return search.toLowerCase() === ''? item
-            //     :item.name.toLowerCase().includes(search);
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5 pt-4 ">
+        {
+          // data.filter((item) => {
+          //     return search.toLowerCase() === ''? item
+          //     :item.name.toLowerCase().includes(search);
 
-            // })
-            room.map((room) => (
-              <Link to={"/details/" + room.id}>
-                <div className="h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden hover:border-blue-700 duration-300">
-                  <img
-                  
-                    key={id}
-                    className="lg:h-48 md:h-36 w-full object-cover object-center"
-                    src={room.apartmentImage}
-                    alt="Room"
-                  />
-                  <div className="p-2">
-                    <h2 className="tracking-widest text-sm title-font font-bold text-gray-400 mb-1">
-                      {room.apartmentName}
-
-                    </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 m">
-                      Ghc {room.apartmentPrice}
-                    </h1>
-                    <div className="flex justify-between">
-                      <p className="leading-relaxed mb-1">price</p>
-                      <p className="leading-relaxed mb-1">Location</p>
-                    </div>
-                   
-
-                    {/* <div className="flex items-center flex-wrap ">
-  </div> */}
+          // })
+          room.map((room) => (
+            <Link to={`/details/${room.apartmentName}/${room.id}`}>
+              <div className="h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden hover:border-blue-700 duration-300">
+                <img
+                  key={id}
+                  className="lg:h-48 md:h-36 w-full object-cover object-center"
+                  src={room.apartmentImage}
+                  alt="Room"
+                />
+                <div className="p-2">
+                  <h2 className="tracking-widest text-sm title-font font-bold text-gray-400 mb-1">
+                    {room.apartmentName}
+                  </h2>
+                  <h1 className="title-font text-lg font-medium text-gray-900 m">
+                    Ghc {room.apartmentPrice}
+                  </h1>
+                  <div className="flex justify-between">
+                    <p className="leading-relaxed mb-1">price</p>
+                    <p className="leading-relaxed mb-1">Location</p>
                   </div>
-                </div>
-              </Link>
-            ))
-          }
-        </div>
-      </div>
 
+                  {/* <div className="flex items-center flex-wrap ">
+  </div> */}
+                </div>
+              </div>
+            </Link>
+          ))
+        }
+      </div>
+    </div>
   );
 };
 

@@ -26,6 +26,20 @@ class RoomDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Room.objects.all()
     serializer_class = serializers.RoomDetailSerializer
 
+    # def query_set(self):
+    #      qs=super().query_set()
+    #      id=self.request.GET['id']
+    #      id=models.Room.objects.get(id=id)
+    #      qs=qs.filter(id=id)
+    #      return qs
+
+
+    
+    
+
+
+   
+
         
 
 

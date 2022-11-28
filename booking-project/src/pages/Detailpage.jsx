@@ -4,32 +4,30 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 const Detailpage = () => {
-  const [room, setRooms] = useState([]);
+  const [property, setProperty] = useState();
   const { id } = useParams();
+  
 
- const [property, setProperty] = useState();
-
- useEffect(() => {
-   fetch("http://localhost:8000/api/room/" + id)
-     .then((res) => {
-       return res.json();
-     })
-     .then((data) => {
-       console.log(data);
-       setProperty(data);
-     });
- }, []);
+    useEffect(() => {
+      fetch("http://localhost:8000/api/rooms/")
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log(data);
+          setProperty(data);
+        });
+    }, []);
 
  
-
-
-  return <div>
-    <h1>Detailpage{id}</h1>
   
-  
+
+  return (
+    <div>
+    {id}
     
-
-  </div>;
+      </div>
+  );
 };
 
 export default Detailpage;
