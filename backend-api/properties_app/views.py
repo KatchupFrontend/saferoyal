@@ -7,10 +7,17 @@ from . import models
 class RoomList(generics.ListCreateAPIView):
     queryset = models.Room.objects.all()
     serializer_class = serializers.RoomListSerializer
+
+    def get_queryset(self):
+        qs=super().get_queryset()
+        category=self.request.GET['category']
+        category=models.CampusCategory.objects.get(id=category)
+        qs=qs.filter(category=category)
+        return qs
     
     # def get_queryset(self):
     #     qs = super().get_queryset()
-    #     category=self.request.get['category']
+    #     category=self.request.GET['category']
     #     category=models.CampusCategory.objects.get(id=category)
     #     qs=qs.filter(category=category)
     #     # return qs
@@ -18,6 +25,12 @@ class RoomList(generics.ListCreateAPIView):
 class RoomDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Room.objects.all()
     serializer_class = serializers.RoomDetailSerializer
+    
+
+
+
+
+
 
 class CustomerList(generics.ListCreateAPIView):
     queryset = models.Customer.objects.all()
