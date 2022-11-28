@@ -1,20 +1,20 @@
-import React,{useState} from 'react'
+import React, { useState } from "react";
 
-import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 const Campus = () => {
-    const [campus, setCampus] = useState()
+  const [campus, setCampus] = useState();
 
-    useEffect (() => {
-        fetch('http://localhost:8000/api/categories/')
-        .then(res => {
-            return res.json()
-        })
-        .then(data => {
-          console.log(data);
-            setCampus(data)
-        })
-    }, [])
+  useEffect(() => {
+    fetch("http://localhost:8000/api/categories/")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setCampus(data);
+      });
+  }, []);
 
   return (
     <div>
@@ -48,7 +48,8 @@ const Campus = () => {
                           {campus.campusname}
                         </h1>
                         <p>
-                          Find hostel and homestel rooms near{''} {campus.campusname}
+                          Find hostel and homestel rooms near{""}{" "}
+                          {campus.campusname}
                         </p>
                       </div>
                     </div>
@@ -60,6 +61,6 @@ const Campus = () => {
       </section>
     </div>
   );
-}
+};
 
-export default Campus
+export default Campus;
