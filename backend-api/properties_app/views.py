@@ -25,8 +25,8 @@ class RoomList(generics.ListCreateAPIView):
 class RoomDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Room.objects.all()
     serializer_class = serializers.RoomDetailSerializer
-    
 
+        
 
 
 
