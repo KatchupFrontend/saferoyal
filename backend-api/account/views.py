@@ -29,7 +29,6 @@ class Login(APIView):
 
 
 
-class Register(APIView):
-    
-    def post(self,request) -> Response:
-        return Response({'message':'God is Good Forever'},status=status.HTTP_200_OK)
+class Register(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
