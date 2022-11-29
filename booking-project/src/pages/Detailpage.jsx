@@ -38,6 +38,7 @@ const Detailpage = () => {
   return (
     <div>
     {id}
+    {property.apartmentName}
       </div>
   );
 };
