@@ -9,38 +9,33 @@ const Detailpage = () => {
   const { id } = useParams();
 
   const getSingleProperty = async () => {
-    const response = await axios.get(`http://localhost:8000/api/room/${id}`);
-    const data = await response.json();
-    console.log(data);
-    setProperty(data);
+    let reqOptions = {
+      url: `http://localhost:8000/api/room/${id}/`,
+      method: "GET",
+    };
+
+    let response = await axios.request(reqOptions);
+    console.log(response.data);
   };
 
   useEffect(() => {
     getSingleProperty();
   }, []);
 
-  
+  // useEffect(() => {
+  //   fetch(`http://localhost:8000/api/room/${id}/`)
+  //     .then((res) => {
+  //       return res.json();
+  //     })
+  //     .then((data) => {
+  //       console.log(data);
+  //       setProperty(data);
+  //     });
+  // }, []);
 
-    // useEffect(() => {
-    //   fetch("http://localhost:8000/api/room/" + id)
-    //     .then((res) => {
-    //       return res.json();
-    //     })
-    //     .then((data) => {
-    //       console.log(data);
-    //       setProperty(data);
-    //     });
-    // }, []);
+  console.log(property);
 
- console.log(property);
-  
-
-  return (
-    <div>
-    {id}
-    {property.apartmentName}
-      </div>
-  );
+  return <div>{id}</div>;
 };
 
 export default Detailpage;

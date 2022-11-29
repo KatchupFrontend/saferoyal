@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import pic7 from '../assets/images/rooms/pic02.jpg'
+import pic7 from "../assets/images/rooms/pic02.jpg";
 
 export default function SignUp() {
   return (
@@ -38,13 +38,13 @@ export default function SignUp() {
               </div>
             </div>
             <button className="w-full py-2 my-4 text-white bg-blue-600 hover:bg-blue-500">
-              Sign In
+              Sign Up
             </button>
             {/* <p className="text-center">Forgot Username or Password?</p> */}
           </form>
-          <div className="flex items-center ml-4"> 
+          <div className="flex items-center ml-4">
             <p>Already have an account?</p>
-            <Link to='/Login'>
+            <Link to="/Login">
               <p className=" text-blue-500 hover:text-blue-600 p-2">Log in</p>
             </Link>
           </div>
