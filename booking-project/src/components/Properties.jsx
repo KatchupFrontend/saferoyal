@@ -166,7 +166,7 @@ const Properties = () => {
 
           // })
           room.map((room) => (
-            <Link to={`/details/${room.apartmentName}/${room.id}`}>
+            <Link to={`/details/${room.id}`}>
               <div className="h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden hover:border-blue-700 duration-300">
                 <img
                   key={id}

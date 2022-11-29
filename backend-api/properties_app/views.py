@@ -1,18 +1,17 @@
+from urllib import response
 from django.shortcuts import render
-from rest_framework import generics,permissions
+from rest_framework import generics,permissions, viewsets
 from . import serializers
+from django.http import HttpResponse, Http404
 from . import models
+
 # Create your views here.
 
 class RoomList(generics.ListCreateAPIView):
-<<<<<<< HEAD
     queryset = models.Room.objects.all()
-=======
->>>>>>> 747be00170460cc1d4c97a77241b6f3799aa073f
     serializer_class = serializers.RoomListSerializer
 
     def get_queryset(self):
-<<<<<<< HEAD
         qs=super().get_queryset()
         category=self.request.GET['category']
         category=models.CampusCategory.objects.get(id=category)
@@ -25,23 +24,24 @@ class RoomList(generics.ListCreateAPIView):
     #     category=models.CampusCategory.objects.get(id=category)
     #     qs=qs.filter(category=category)
     #     # return qs
-=======
-        category=self.request.get['category']
-        category=models.CampusCategory.objects.get(id=category)
-        return models.Room.objects.filter(category = category)
->>>>>>> 747be00170460cc1d4c97a77241b6f3799aa073f
-
+       
 class RoomDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Room.objects.all()
     serializer_class = serializers.RoomDetailSerializer
 
-    # def query_set(self):
-    #      qs=super().query_set()
-    #      id=self.request.GET['id']
-    #      id=models.Room.objects.get(id=id)
-    #      qs=qs.filter(id=id)
-    #      return qs
 
+    def get_object(self, pk):
+        try:
+            return models.Room.objects.get(pk=pk)
+        except models.Room.DoesNotExist:
+            raise Http404
+
+    
+    def get(self, id):
+        room = self.get_object(id)
+        serializer = serializers.RoomDetailSerializer(room)
+        return response(serializer.data)
+   
 
     
     
