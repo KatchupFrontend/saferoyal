@@ -61,7 +61,7 @@ class Room(models.Model):
     apartmentName = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
     apartmentPrice = models.DecimalField(max_digits=10, decimal_places=2)
-    persons = models.CharField(choices=(('One in one', '1 in 1'),('Two in one', '2 in 1'),('Three in one', '3 in 1'),('Four in one', '4 in 1')),max_length=100)
+    persons = models.CharField(choices=(('1 in 1', 'one in one'),( '2 in 1','Two in one'),( '3 in 1','Three in one'),( '4 in 1','Four in one')),max_length=100)
     description = models.TextField()
     apartmentImage = models.ImageField(upload_to='properties/images/')
     room1 = models.ImageField(upload_to='properties/images/')
