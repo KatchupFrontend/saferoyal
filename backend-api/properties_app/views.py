@@ -1,16 +1,19 @@
+from urllib import response
 from django.shortcuts import render
-from rest_framework import generics, permissions
+from rest_framework import generics,permissions, viewsets
 from . import serializers
+from django.http import HttpResponse, Http404
 from . import models
+
 # Create your views here.
 
 
 class RoomList(generics.ListCreateAPIView):
+    queryset = models.Room.objects.all()
     serializer_class = serializers.RoomListSerializer
 
     def get_queryset(self):
         category = self.request.GET.get('category')
-        print(category)
         category = models.CampusCategory.objects.get(id=category)
         return models.Room.objects.filter(category=category)
 

@@ -33,7 +33,7 @@ const Campus = () => {
             {campus &&
               campus.map((campus) => (
                 <div class="lg:w-1/3 sm:w-1/2 p-4 ">
-                  <Link to={"/Properties/" + campus.id}>
+                  <Link to={`/Properties/${campus.campusname}/${campus.id}`}>
                     <div class="flex relative ">
                       <img
                         alt="gallery"
