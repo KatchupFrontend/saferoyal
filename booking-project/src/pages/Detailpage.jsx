@@ -6,7 +6,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Detailpage = () => {
-  const [property, setProperty] = useState('');
+  const [property, setProperty] = useState("");
   const { id } = useParams();
 
   const getSingleProperty = async () => {
@@ -20,10 +20,9 @@ const Detailpage = () => {
     setProperty(response.data);
   };
 
-   useEffect(() => {
-     getSingleProperty();
-    
-   }, []);
+  useEffect(() => {
+    getSingleProperty();
+  }, []);
 
   
 
@@ -161,7 +160,7 @@ const Detailpage = () => {
                 </span>
 
                 <button class="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">
-                  <Link to={"/checkout/"}>Book room</Link>
+                  <Link to={`/checkout/${property.id}`}>Book room</Link>
                 </button>
               </div>
             </div>
