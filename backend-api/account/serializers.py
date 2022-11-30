@@ -1,12 +1,13 @@
 from rest_framework.serializers import ModelSerializer
-from django.contrib.auth.models import User
+from properties_app.models import Customer
+from hashlib import sha256
 
 
-class UserSerializer(ModelSerializer):
+class CustomerSerializer(ModelSerializer):
 
     class Meta:
-        model = User
-        fields = ['id','first_name','last_name','username','email','password']
+        model = Customer
+        fields = ['id','fullname','email','password','phone_number',]
         extra_kwargs = {
             'password': {
                 'write_only':True
@@ -15,9 +16,10 @@ class UserSerializer(ModelSerializer):
 
     def create(self, validated_data):
         email = validated_data.get('email')
-        username = validated_data.get('username')
-        first_name = validated_data.get('firstName')
-        last_name = validated_data.get('lastName')
-        password = validated_data.get('password')
+        fullname = validated_data.get('fullname')
+        password = sha256(validated_data.get('password').encode())
+        phone_number = validated_data.get('phone_number')
+        hashed_password = password.hexdigest()
         # Create user
-        return User.objects.create_user(username=username,email=email,password=password,first_name = first_name,last_name=last_name)
+        return Customer.objects.create(email = email, fullname = fullname, password = hashed_password, phone_number = phone_number)
+        # return Customer(email = email, fullname = fullname, password = hashed_password, phone_number = phone_number)

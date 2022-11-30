@@ -3,7 +3,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import generics,status
 from rest_framework_simplejwt.tokens import RefreshToken
-from .serializers import UserSerializer
+from .serializers import CustomerSerializer
+from properties_app.models import Customer
 
 # Create your views here.
 class Login(APIView):
@@ -30,5 +31,5 @@ class Login(APIView):
 
 
 class Register(generics.CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+    queryset = Customer.objects.all()
+    serializer_class = CustomerSerializer
