@@ -91,7 +91,7 @@ text: "Pay Now",
                 <p className="text-sm leading-none">Back</p>
               </button>
               <p className="text-3xl lg:text-4xl font-semibold leading-7 lg:leading-9 text-gray-800">
-                Checkou
+                Checkout
               </p>
               <p className="text-base leading-normal sm:leading-4 text-gray-600">
                  Rooms {">"} RoomDetail {">"} Checkout
