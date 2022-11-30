@@ -1,9 +1,11 @@
+from hashlib import sha256
 from django.contrib.auth.models import User
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import generics,status
 from rest_framework_simplejwt.tokens import RefreshToken
-from .serializers import UserSerializer
+from .serializers import CustomerSerializer
+from properties_app.models import Customer
 
 # Create your views here.
 class Login(APIView):
@@ -13,10 +15,11 @@ class Login(APIView):
         password = request.data.get('password')
         # Get user
         try:
-            user = User.objects.get(email = email)
-            if user.check_password(password):
-                token = RefreshToken.for_user(user=user)
-                serializer = UserSerializer(user)
+            user = Customer.objects.get(email = email)
+            hashed_password = sha256(password.encode()).hexdigest()
+            if user.password == hashed_password:
+                token = RefreshToken()
+                serializer = CustomerSerializer(user)
                 data = {
                     'user': serializer.data,
                     'refresh': str(token),
@@ -30,5 +33,5 @@ class Login(APIView):
 
 
 class Register(generics.CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+    queryset = Customer.objects.all()
+    serializer_class = CustomerSerializer
