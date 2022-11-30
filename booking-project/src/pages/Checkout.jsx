@@ -94,7 +94,7 @@ text: "Pay Now",
                 Checkout
               </p>
               <p className="text-base leading-normal sm:leading-4 text-gray-600">
-                Home {">"} Rooms {">"} RoomDetail {">"} Checkout
+                 Rooms {">"} RoomDetail {">"} Checkout
               </p>
             </div>
             <div className="flex flex-col xl:flex-row justify-center xl:justify-between space-y-6 xl:space-y-0 xl:space-x-6 w-full">
