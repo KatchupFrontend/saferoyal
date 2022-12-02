@@ -806,6 +806,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
+"@paystack/inline-js@^2.12.6":
+  "integrity" "sha512-OGr4o3v1iDnmikWfdeGiTl+q4nbAK1ffvrp7wBcKLSg65nWe+Eus90Mn72OQ/mo/zJdHm3IY2RZX3FtgIzrEsw=="
+  "resolved" "https://registry.npmjs.org/@paystack/inline-js/-/inline-js-2.12.6.tgz"
+  "version" "2.12.6"
+
 "@popperjs/core@^2.9.3":
   "integrity" "sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw=="
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz"
@@ -1452,9 +1457,9 @@
   dependencies:
     "is-arrayish" "^0.2.1"
 
-"esbuild-windows-64@0.15.10":
-  "integrity" "sha512-2H0gdsyHi5x+8lbng3hLbxDWR7mKHWh5BXZGKVG830KUmXOOWFE2YKJ4tHRkejRduOGDrBvHBriYsGtmTv3ntA=="
-  "resolved" "https://registry.npmjs.org/esbuild-windows-64/-/esbuild-windows-64-0.15.10.tgz"
+"esbuild-linux-64@0.15.10":
+  "integrity" "sha512-jd8XfaSJeucMpD63YNMO1JCrdJhckHWcMv6O233bL4l6ogQKQOxBYSRP/XLWP+6kVTu0obXovuckJDcA0DKtQA=="
+  "resolved" "https://registry.npmjs.org/esbuild-linux-64/-/esbuild-linux-64-0.15.10.tgz"
   "version" "0.15.10"
 
 "esbuild@^0.15.6":
@@ -2382,6 +2387,11 @@
     "classnames" "^2.2.6"
     "debounce" "^1.2.0"
     "easy-bem" "^1.1.1"
+
+"react-paystack@^4.0.1":
+  "integrity" "sha512-6bJ+kHlJZqHupnezlA96tlZh+GQc1giNesLN1vvjQ1lsK8mavjF24uyiwyewInOUSs42+9hx1eP8gZTIgHLYLg=="
+  "resolved" "https://registry.npmjs.org/react-paystack/-/react-paystack-4.0.1.tgz"
+  "version" "4.0.1"
 
 "react-refresh@^0.14.0":
   "integrity" "sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ=="
