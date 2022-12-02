@@ -14,7 +14,7 @@ class RoomList(generics.ListCreateAPIView):
 
     def get_queryset(self):
         category = self.request.GET.get('category')
-        category = models.CampusCategory.objects.get(id=category)
+        category = models.Room.objects.get(id=category)
         return models.Room.objects.filter(category=category)
 
 
