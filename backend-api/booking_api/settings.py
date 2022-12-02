@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'account',
     # Third party
     'rest_framework',
-    'paystack',
+    
 ]
 
 MIDDLEWARE = [

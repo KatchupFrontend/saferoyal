@@ -45,8 +45,8 @@ const Serv = () => {
           </div>
           <div class="flex flex-wrap -m-4 text-center">
             {services.map(({ id, type, logo, brief }) => (
-              <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
-                <div class="border-4 border-gray-800 px-4 py-6 rounded-lg hover:border-gray-500 duration-200 hover:scale-75 shadow-xl">
+              <div class="p-4 md:w-1/4 sm:w-1/2 w-full ">
+                <div class="border-4 border-gray-800 px-4 py-6 rounded-lg hover:border-gray-500 duration-200 hover:scale-[0.9] shadow-xl h-64">
                   <div className="flex justify-center">{logo}</div>
 
                   <p class="leading-relaxed text-white">{type}</p>
