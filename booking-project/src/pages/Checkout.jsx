@@ -3,7 +3,7 @@ import PaystackPop from '@paystack/inline-js'
 
 const Checkout = () => {
 
-
+  const amount = 1000000;
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -33,7 +33,6 @@ const Checkout = () => {
       
       
 
-  const amount = detail.apartmentPrice;
 
 
 
