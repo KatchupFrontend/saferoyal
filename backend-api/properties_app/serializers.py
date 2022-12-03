@@ -4,7 +4,11 @@ from . import models
 class RoomListSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Room
+<<<<<<< HEAD
         fields = ['id','category', 'floortype', 'roomType','persons', 'apartmentName', 'address', 'apartmentPrice','apartmentImage','room1','room2','room3']
+=======
+        fields = '__all__'
+>>>>>>> parent of 4453683 (filtering rooms)
 
     def __init__(self, *args, **kwargs):
         super(RoomListSerializer, self).__init__(*args, **kwargs)

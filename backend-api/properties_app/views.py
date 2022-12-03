@@ -12,11 +12,14 @@ class RoomList(generics.ListCreateAPIView):
     queryset = models.Room.objects.all()
     serializer_class = serializers.RoomListSerializer
 
+<<<<<<< HEAD
     def get_queryset(self):
         category = self.request.GET.get('category')
         category = models.CampusCategory.objects.get(id=category)
         return models.Room.objects.filter(category=category)
 
+=======
+>>>>>>> parent of 4453683 (filtering rooms)
 
 class RoomDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Room.objects.all()

@@ -12,7 +12,7 @@ const Home = () => {
        <Stats/>
        <Serv/>
        <Cards/>
-      
+       
       </HLayout>
 
     </div>

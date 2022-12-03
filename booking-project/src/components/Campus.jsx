@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
+=======
+import React,{useState} from 'react'
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+>>>>>>> parent of 4453683 (filtering rooms)
 const Campus = () => {
   const [campus, setCampus] = useState();
 
