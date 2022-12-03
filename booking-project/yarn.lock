@@ -821,6 +821,11 @@
   resolved "https://registry.npmjs.org/@paystack/inline-js/-/inline-js-2.12.6.tgz"
   integrity sha512-OGr4o3v1iDnmikWfdeGiTl+q4nbAK1ffvrp7wBcKLSg65nWe+Eus90Mn72OQ/mo/zJdHm3IY2RZX3FtgIzrEsw==
 
+"@paystack/inline-js@^2.12.6":
+  "integrity" "sha512-OGr4o3v1iDnmikWfdeGiTl+q4nbAK1ffvrp7wBcKLSg65nWe+Eus90Mn72OQ/mo/zJdHm3IY2RZX3FtgIzrEsw=="
+  "resolved" "https://registry.npmjs.org/@paystack/inline-js/-/inline-js-2.12.6.tgz"
+  "version" "2.12.6"
+
 "@popperjs/core@^2.9.3":
   version "2.11.6"
   resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz"
@@ -1447,10 +1452,17 @@ error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
+<<<<<<< HEAD
 esbuild-android-64@0.15.10:
   version "0.15.10"
   resolved "https://registry.yarnpkg.com/esbuild-android-64/-/esbuild-android-64-0.15.10.tgz#8a59a84acbf2eca96996cadc35642cf055c494f0"
   integrity sha512-UI7krF8OYO1N7JYTgLT9ML5j4+45ra3amLZKx7LO3lmLt1Ibn8t3aZbX5Pu4BjWiqDuJ3m/hsvhPhK/5Y/YpnA==
+=======
+"esbuild-linux-64@0.15.10":
+  "integrity" "sha512-jd8XfaSJeucMpD63YNMO1JCrdJhckHWcMv6O233bL4l6ogQKQOxBYSRP/XLWP+6kVTu0obXovuckJDcA0DKtQA=="
+  "resolved" "https://registry.npmjs.org/esbuild-linux-64/-/esbuild-linux-64-0.15.10.tgz"
+  "version" "0.15.10"
+>>>>>>> bec4f0a6ba0d706490042048a3a678854bb52124
 
 esbuild-android-arm64@0.15.10:
   version "0.15.10"
@@ -2466,10 +2478,22 @@ react-indiana-drag-scroll@^2.2.0:
     debounce "^1.2.0"
     easy-bem "^1.1.1"
 
+<<<<<<< HEAD
 react-paystack@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/react-paystack/-/react-paystack-4.0.1.tgz"
   integrity sha512-6bJ+kHlJZqHupnezlA96tlZh+GQc1giNesLN1vvjQ1lsK8mavjF24uyiwyewInOUSs42+9hx1eP8gZTIgHLYLg==
+=======
+"react-paystack@^4.0.1":
+  "integrity" "sha512-6bJ+kHlJZqHupnezlA96tlZh+GQc1giNesLN1vvjQ1lsK8mavjF24uyiwyewInOUSs42+9hx1eP8gZTIgHLYLg=="
+  "resolved" "https://registry.npmjs.org/react-paystack/-/react-paystack-4.0.1.tgz"
+  "version" "4.0.1"
+
+"react-refresh@^0.14.0":
+  "integrity" "sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ=="
+  "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.14.0.tgz"
+  "version" "0.14.0"
+>>>>>>> bec4f0a6ba0d706490042048a3a678854bb52124
 
 react-refresh@^0.14.0:
   version "0.14.0"
