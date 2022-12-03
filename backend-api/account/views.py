@@ -14,6 +14,7 @@ class Login(APIView):
         email = request.data.get('email')
         password = request.data.get('password')
         # Get user
+
         try:
             user = Customer.objects.get(email = email)
             hashed_password = sha256(password.encode()).hexdigest()
@@ -29,6 +30,8 @@ class Login(APIView):
         except User.DoesNotExist:
             pass
         return Response({'message': 'Invalid username and/or password.','status': 404},status=status.HTTP_401_UNAUTHORIZED)
+
+
 
 
 

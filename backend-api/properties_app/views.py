@@ -22,6 +22,17 @@ class RoomDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Room.objects.all()
     serializer_class = serializers.RoomDetailSerializer
 
+    def get_object(self, pk):
+        try:
+            return models.Room.objects.get(pk=pk)
+        except models.Room.DoesNotExist:
+            raise Http404
+
+
+    def get(self, id):
+        room = self.get_object(id)
+        serializer = serializers.RoomDetailSerializer(room)
+        return response(serializer.data)
 
 class CustomerList(generics.ListCreateAPIView):
     queryset = models.Customer.objects.all()
