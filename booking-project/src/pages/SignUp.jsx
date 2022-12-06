@@ -31,7 +31,7 @@ const SignUp = () => {
 
       if (response.status === 201) {
         let data = await response.json();
-        router("/"); // Go to home
+        router("/Login"); // Go to home
       }
     }
   };

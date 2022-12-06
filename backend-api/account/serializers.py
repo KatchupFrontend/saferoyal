@@ -22,4 +22,3 @@ class CustomerSerializer(ModelSerializer):
         hashed_password = password.hexdigest()
         # Create user
         return Customer.objects.create(email = email, fullname = fullname, password = hashed_password, phone_number = phone_number)
-        # return Customer(email = email, fullname = fullname, password = hashed_password, phone_number = phone_number)
