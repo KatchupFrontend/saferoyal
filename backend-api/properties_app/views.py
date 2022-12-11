@@ -57,3 +57,13 @@ class CategoryList(generics.ListCreateAPIView):
 class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.CampusCategory.objects.all()
     serializer_class = serializers.CategoryDetailSerializer
+
+
+class PaymentView(generics.CreateAPIView):
+    queryset = models.Payment.objects.all()
+    serializer_class = serializers.PaymentSerializer
+
+
+class PaymentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.Payment.objects.all()
+    serializer_class = serializers.PaymentDetailSerializer

@@ -9,8 +9,8 @@ import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import { Team } from "./pages/Team";
 import House from "../src/pages/House";
-import Detailpage from '../src/pages/Detailpage'
-import Checkout from "./pots/Landing/Checkout";
+import Detailpage from "../src/pages/Detailpage";
+import Checkout from "./pages/Checkout";
 import PaymentMethod from "./pots/Landing/PaymentMethod";
 import Confirm from "./pots/Landing/Confirm";
 import LandingHero from "./pots/Landing/LandingHero";
@@ -22,17 +22,17 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        
-        <Route path="/campus" element={<Campus/>} />
+
+        <Route path="/campus" element={<Campus />} />
         <Route path="/About" element={<AboutPage />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Login" element={<Login />} />
-  
+
         <Route path="/Properties/:slug/:id" element={<Properties />} />
         <Route path="/details/:id" element={<Detailpage />} />
         <Route path="/checkout/:id" element={<Checkout />} />
         <Route path="/Services" element={<Services />} />
-      
+
         {/* <Route path="/payment" element={<PaymentMethod />} />
 
 

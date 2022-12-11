@@ -29,12 +29,12 @@ const Login = () => {
       headers: headersList,
     });
 
-    const data = await response.json();
     // Error
-    if (response.status === 401) {
+    if (response.status != 200) {
       setIsError(true);
       setErrorText(data["message"]);
     } else {
+      const data = await response.json();
       // Success
       setIsError(false);
       localStorage.setItem("refresh", data["refresh"]);

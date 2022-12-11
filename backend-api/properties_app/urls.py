@@ -18,5 +18,8 @@ urlpatterns = [
 
     # path('booking/<int:pk>/', views.BookingDetail.as_view()),
 
+    path('payments/', views.PaymentView.as_view()),
+    path('payments/<int:pk>/', views.PaymentDetail.as_view()),
+
 
 ]

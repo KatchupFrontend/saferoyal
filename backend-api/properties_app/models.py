@@ -58,11 +58,11 @@ class Room(models.Model):
     roomType = models.CharField(choices=( ('HOSTEL', "hostel"),
             ('HOMESTEL', "homestel"),
             ), max_length=10)
-    
+    apartmentUrl = models.URLField(max_length=200, default=None, null= True)
     apartmentName = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
     apartmentPrice = models.DecimalField(max_digits=10, decimal_places=2)
-    persons = models.CharField(choices=(('One in one', '1 in 1'),('Two in one', '2 in 1'),('Three in one', '3 in 1'),('Four in one', '4 in 1')),max_length=100)
+    persons = models.CharField(choices=(( '1 in 1','1 in 1'),( '2 in 1','2 in 1'),( '3 in 1','3 in 1'),('4 in 1','4 in 1')),max_length=100)
     description = models.TextField()
     apartmentImage = models.ImageField(upload_to='properties/images/')
     room1 = models.ImageField(upload_to='properties/images/')
@@ -76,13 +76,19 @@ class Room(models.Model):
 
 
 #Payment model
-# class Payment(models.Model):
-#     amount = models.CharField(max_length=20)
-#     ref = models.CharField(max_length=20)
-#     email = models.ForeignKey(max_length=20)
-#     verified = models.BooleanField(default=False)
-#     date_created = models.DateTimeField(auto_now_add=True)
-#     phone = models.CharField(max_length=20)
+class Payment(models.Model):
+    amount = models.CharField(max_length=20)
+    ref = models.CharField(max_length=200)
+    email = models.EmailField(max_length=200, unique=True)
+    booked_room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    # booked_by = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    date_created = models.DateTimeField(auto_now_add=True)
+    phone = models.CharField(max_length=20)
+    
+    def __str__(self):
+        return self.email
+
+
 
 
 
@@ -98,16 +104,13 @@ class Book(models.Model):
 
 # Booked Rooms
 class Bookings(models.Model):
-     booking = models.ForeignKey(Book, on_delete=models.CASCADE)
-     room = models.ForeignKey(Room, on_delete=models.CASCADE)
-     status = models.BooleanField( default=True )
-     def __str__(self):
-         return self.booking
+    booking = models.ForeignKey(Book, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    status = models.BooleanField( default=True )
+    def __str__(self):
+        return self.booking
 
 
 
-
-
-   
 
 

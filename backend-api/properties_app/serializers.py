@@ -4,7 +4,7 @@ from . import models
 class RoomListSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Room
-        fields = ['id','category', 'floortype', 'roomType', 'apartmentName', 'address', 'apartmentPrice','apartmentImage','room1','room2','room3']
+        fields = ['id','category', 'floortype', 'roomType','persons', 'apartmentName', 'address', 'apartmentPrice','apartmentImage','room1','room2','room3', 'description']
 
     def __init__(self, *args, **kwargs):
         super(RoomListSerializer, self).__init__(*args, **kwargs)
@@ -12,7 +12,7 @@ class RoomListSerializer(serializers.ModelSerializer):
 class RoomDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Room
-        fields = ['id','category', 'floortype', 'roomType', 'apartmentName', 'address', 'apartmentPrice','apartmentImage','room1','room2','room3']
+        fields = ['id','category', 'floortype', 'roomType', 'apartmentName', 'address', 'apartmentPrice','apartmentImage','room1','room2','room3', 'persons', 'description']
 
 
     def __init__(self, *args, **kwargs):
@@ -73,3 +73,22 @@ class CategoryDetailSerializer(serializers.ModelSerializer):
 
     def __init__(self, *args, **kwargs):
          super(CategoryDetailSerializer, self).__init__(*args, **kwargs)
+
+
+class PaymentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Payment
+        fields = ['booked_room','amount', 'date_created','ref','phone','email']
+
+    def __init__(self, *args, **kwargs):
+         super(PaymentSerializer, self).__init__(*args, **kwargs)
+        
+
+class PaymentDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Payment
+        fields = ['id','booked_room','amount', 'booked_by', 'date_created','ref','phone','email']
+
+    def __init__(self, *args, **kwargs):
+         super(PaymentDetailSerializer, self).__init__(*args, **kwargs)
+    

@@ -4,7 +4,6 @@ from hashlib import sha256
 
 
 class CustomerSerializer(ModelSerializer):
-
     class Meta:
         model = Customer
         fields = ['id','fullname','email','password','phone_number',]
